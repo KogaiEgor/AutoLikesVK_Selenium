@@ -22,6 +22,7 @@ def main():
         driver.close()
         driver.quit()
 
+
 def authorize(driver):
     wait = WebDriverWait(driver, 10)
 
@@ -37,6 +38,7 @@ def authorize(driver):
     password_field.send_keys(os.getenv("password"))
     password_field.send_keys(Keys.ENTER)
     time.sleep(2)
+
 
 def like_posts(driver, url):
     driver.get(url)
